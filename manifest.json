@@ -11,7 +11,8 @@
   "permissions": [
     "identity",
     "storage",
-    "notifications"
+    "notifications",
+    "alarms"
   ],
   "web_accessible_resources": [{
     "resources": ["notif.mp3"],

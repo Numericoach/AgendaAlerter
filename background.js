@@ -3,7 +3,6 @@ let idCalendar;
 let preview=0;
 let preventTime=5;
 let colorChoose;
-chrome.tabs.create({url: 'settings.html', pinned: true});
 chrome.identity.getAuthToken({interactive: true}, function(token) {
 let init = {
     method: 'GET',
@@ -24,9 +23,6 @@ let init = {
         preventTime=data.preferences.preventTime;
         colorChoose=data.preferences.colorChoose;
         retrieveAllEvents();
-        setInterval(retrieveAllEvents, 300000);
-        setInterval(checkNewest, 10000);
-        setInterval(function() { console.log('heull');preview+=1; }, 1000);
       }
       console.log(colorChoose);
 });
@@ -89,6 +85,7 @@ function checkNewest()
     console.log(resultInMinutes + " / " + preventTime);
     if(resultInMinutes==preventTime)
     {
+      chrome.tabs.create({url: 'alert.html' });
       chrome.notifications.create('', {
         title: allEventsProgrammed[i].name,
         message: "L'événement commence dans " + preventTime + " minutes",
@@ -98,3 +95,11 @@ function checkNewest()
     }
   }
 }
+
+chrome.alarms.create("checkEvents", {periodInMinutes: 1});
+
+chrome.alarms.onAlarm.addListener(function(alarme) {
+  if (alarme.name === "checkEvents") {
+    checkNewest();
+  }
+});
