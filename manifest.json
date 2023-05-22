@@ -1,0 +1,27 @@
+{
+  "name": "Agenda Alert",
+  "version": "1.0",
+  "description": "Uses OAuth to connect to Google's People API and display contacts photos.",
+  "manifest_version": 3,
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAn0NKh2noMhjNV250nMT+YPoaIW8tHHpnurDhIQfwrsWxHY/kcH0Yd+zP/rXYnPBLdpdxdNGHihrOdjWdn/1JNxlJcsWKAp7f7k9f2EDh0+K71P1rpAsI8jnBXBDnhsteT2JWan27yLjJZjNaFUqLL9YLBFW/7ZODRPd6qiUGlQMqQYdfK86Mwt5bZQkMXuocKJF1qnnZxjuy8XmOpoYnlnu6XGrTV1D4zpNgyVmZ2JEblNiV/+b2kU84binhJpbBMBOEmBJbTlvDyCrAa8r2cOcaUAWm8WptjimsglaNldzDl5wSSnEVSXwBFmH8gWNbANWz6UUjNG14yDfQLRHsOwIDAQAB",
+  "action": {
+    "default_title": "FriendBlock, friends face's in a block.",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "identity",
+    "storage",
+    "notifications"
+  ],
+  "web_accessible_resources": [{
+    "resources": ["notif.mp3"],
+    "matches": ["<all_urls>"]
+  }],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "oauth2": {
+    "client_id": "146750257737-1q3th53ga4k0pi4lq9531o04t1anb71v.apps.googleusercontent.com",
+    "scopes":["https://www.googleapis.com/auth/contacts.readonly", "https://www.googleapis.com/auth/calendar.readonly"]
+  }
+}
