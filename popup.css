@@ -32,3 +32,12 @@ html {
 #notLogged {
     display: none;
 }
+#retour {
+    font-size: 10px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    position: fixed;
+    bottom: 10px;
+    left: 0px;
+}

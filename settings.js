@@ -67,7 +67,7 @@ function savePreferences()
           );
         }
       });
-    alert('saved');
+    alert('Préférences sauvegardées');
 }
 function retrievePreferences(pref='')
 {

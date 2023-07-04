@@ -30,12 +30,12 @@ window.onload = function() {
       }
       console.log(colorChoose);
     });
-    document.getElementById('options').addEventListener('click', function() {   chrome.tabs.create({url: 'settings.html'});  });
+    document.getElementById('options').addEventListener('click', function() { chrome.tabs.create({url: 'settings.html'});  });
+    document.getElementById('retour').addEventListener('click', function(el) { chrome.tabs.create({url: 'https://docs.google.com/forms/d/e/1FAIpQLSc1AUhIXciH2NrqZ4DAoEWkvOhBce5xapS2_JkxohAKzFsIgw/viewform?usp=sf_link' });  });
 };
 function setGlobalToken(tokenObject)
 {
   globalToken=tokenObject;
-  console.log(globalToken);
 }
 function sortFunction(a,b){  
   var dateA = new Date(a.date).getTime();
@@ -45,8 +45,6 @@ function sortFunction(a,b){
 function checkNewest()
 {
   allEventsProgrammed=allEventsProgrammed.sort(sortFunction);
-  console.log('Triage');
-  console.log(allEventsProgrammed);
   let containerFurther=document.getElementById('furtherEvents');
   containerFurther.innerHTML='';
   for(let i=0;i<allEventsProgrammed.length;i++)
@@ -74,6 +72,10 @@ function checkNewest()
       }
     }
   }
+  if(containerFurther.innerHTML=='')
+  {
+    containerFurther.innerHTML='<p style="color: grey;font-size: 14px;text-align: center;">Aucun événement à venir 🧹</p>'
+  }
 }
 function retrieveAllEvents()
 {
@@ -100,7 +102,6 @@ function retrieveAllEvents()
       });
       checkNewest();
     } 
-    console.log(allEventsProgrammed);
     });
 }
 function getMinAndMaxISO()

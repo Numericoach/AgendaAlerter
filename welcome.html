@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Agenda Alerter - Bienvenue</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="popup.css"/>
+<style>
+h1 {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.customCard {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 20px;
+    background: #3466ff;
+    margin-top: 15vh;
+    max-width: 700px;
+    min-width: 50%;
+    border-radius: 6px;
+    border: 2px solid #507af8;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+.customCard h1 {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    font-weight: 500;
+}
+h2 {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+.customCard p {
+    color: white;
+    font-size: 15px;
+}
+#logoCentered {
+    width: 90px;
+    display: block;
+    margin: auto;
+    margin-top: -70px;
+}
+ul li {
+    color: white;
+    font-size: 15px;
+}
+.screen {
+    max-width: 300px;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+}
+</style>
+</head>
+<body>
+<div class="customCard">
+    <img src="./images/icon128.png" id="logoCentered" alt="Logo de Agenda Alerter"/>
+    <h1><b>Merci pour votre installation !</b></h1>
+    <h2>Comment ça fonctionne ?</h2>
+    <p>Notre extension utilise <b>la couleur de vos événements pour se repérer</b>, et vous permettra ainsi de différencier et marquer facilement vos événements "importants" (qui méritent une notification sonore + push).<br/><br/><b>Par exemple</b> : vous souhaitez que TOUS vos événements Google Agenda jaune soit notifiés. Rendez-vous dans le panneau d'option et modifiez la couleur de déclenchement, allez ensuite changer simplement la couleur de vos événements dans Google Agenda !</p>
+    <img src="./images/screenGAgenda.png" alt="Capture d'écran 1" class="screen"/>
+    <h2>Démarrage rapide, terminons la configuration !</h2>
+    <p>Découvrez le plaisir de ne plus rater une seule réunion, plus que 3 étapes et tout sera bon !</p>
+    <ul>
+        <li><b>Etape 1</b> : Configurez l'extension depuis le menu option;</li>
+        <li><b>Etape 2</b> : Acceptez la demande d'authentification vers votre compte Google;</li>
+        <li><b>Etape 3</b> : Redémarrez votre navigateur Web;</li>
+        <li><b>C'est terminé ⭐</b></li>
+    </ul>
+    <a href="./settings.html" class="btn btn-light">Ouvrir les options et commencer à utiliser le plugin !</a>
+</div>
+</body>
+</html>

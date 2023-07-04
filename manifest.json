@@ -1,11 +1,11 @@
 {
-  "name": "Agenda Alert",
-  "version": "1.0",
-  "description": "Uses OAuth to connect to Google's People API and display contacts photos.",
+  "name": "Agenda Alerter",
+  "version": "1.3",
+  "description": "Ne ratez plus jamais une réunion ! Agenda Alerter vous accompagne au quotidien pour vous faciliter la gestion de votre temps",
   "manifest_version": 3,
-  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAn0NKh2noMhjNV250nMT+YPoaIW8tHHpnurDhIQfwrsWxHY/kcH0Yd+zP/rXYnPBLdpdxdNGHihrOdjWdn/1JNxlJcsWKAp7f7k9f2EDh0+K71P1rpAsI8jnBXBDnhsteT2JWan27yLjJZjNaFUqLL9YLBFW/7ZODRPd6qiUGlQMqQYdfK86Mwt5bZQkMXuocKJF1qnnZxjuy8XmOpoYnlnu6XGrTV1D4zpNgyVmZ2JEblNiV/+b2kU84binhJpbBMBOEmBJbTlvDyCrAa8r2cOcaUAWm8WptjimsglaNldzDl5wSSnEVSXwBFmH8gWNbANWz6UUjNG14yDfQLRHsOwIDAQAB",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAj8iw0R7E4gS8g28b347YwgaL9w/zomwA5Zn7aD7SNnToshIdvmFVNCelHJY9YJgvQ2oPRUhtRepw2nAobco7DLObtTHzqrLWGGQQkFpDOeTo71x9BUW0gYVYhiOBs/BLClyMxai/hTulMUZmA07KUBipNfE98aw2NO1zgMJSrLns3U2Y9YxCWRs3qIeQOWNUVKEux3aSdmJCCGuOuXJoK1rDsPZf8Yo4GnwtMF0RAtHTKj+5gDyRMyUU043XNYOJmCPvnVLcRnvPzxSUNIuzQ5lnCuD1y5j+3c/pHFUsMt9mWVs6vk1Bg6CfOvdDBUbvER6UPgLLpLidSF4quuzAFwIDAQAB",
   "action": {
-    "default_title": "FriendBlock, friends face's in a block.",
+    "default_title": "Ouvrir Agenda Alerter",
     "default_popup": "popup.html"
   },
   "permissions": [
@@ -14,6 +14,12 @@
     "notifications",
     "alarms"
   ],
+  "icons": {
+    "16": "images/icon16.png",
+    "32": "images/icon32.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
   "web_accessible_resources": [{
     "resources": ["notif.mp3"],
     "matches": ["<all_urls>"]
@@ -22,7 +28,7 @@
     "service_worker": "background.js"
   },
   "oauth2": {
-    "client_id": "146750257737-1q3th53ga4k0pi4lq9531o04t1anb71v.apps.googleusercontent.com",
+    "client_id": "146750257737-mmko7dpkacu2rhj71qpk7v1705a56jj6.apps.googleusercontent.com",
     "scopes":["https://www.googleapis.com/auth/contacts.readonly", "https://www.googleapis.com/auth/calendar.readonly"]
   }
 }
